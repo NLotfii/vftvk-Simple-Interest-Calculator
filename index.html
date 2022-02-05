@@ -1,16 +1,62 @@
+<!DOCTYPE html>
 <html>
+    <!---Head--->
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <script src = "script.js"></script>
+        <link rel = "stylesheet" href = "style.css">
+        <title> Simple Interest Calculator </title>
     </head>
+    <!---Body--->
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <!---Division--->
+        <div class = "maindiv">
+            <!---Calculator headline--->
+            <h1> Simple Interest Calculator </h1>
+                <!---Fieldset--->
+                <fieldset>
+                    <!---Input box for the amount--->
+                    <label for = "principal"> Amount
+                        <div class = "input">
+                            <input type = "number" id = "principal">
+                        </div>
+                    </label>
+                    <br>
+                    <!---Slider for the interest rate--->
+                    <label for = "rate" onchange = "updateRate()"> Interest Rate
+                        <div class = "input">
+                            <input type = "range" id = "rate" min = "1" max = "20" step = "0.25" value = "10.25">
+                            <span id = "rate_val"> 10.25 </span> %
+                        </div>
+                    </label>
+                    <br>
+                    <!---Dropdown box for the years--->
+                    <label> No. of Years
+                        <div class = "input">
+                            <select id = "years">
+                                <option value = "1"> 1 </option>
+                                <option value = "2"> 2 </option>
+                                <option value = "3"> 3 </option>
+                                <option value = "4"> 4 </option>
+                                <option value = "5"> 5 </option>
+                                <option value = "6"> 6 </option>
+                                <option value = "7"> 7 </option>
+                                <option value = "8"> 8 </option>
+                                <option value = "9"> 9 </option>
+                                <option value = "10"> 10 </option>
+                            </select>
+                        </div>
+                    </label>
+                    <br>
+                    <!---Compute interest button by calling the compute() function--->
+                    <button onclick = "compute()"> Compute Interest </button>
+                    <br>
+                    <!---Show computation result--->
+                    <p id = "result"></p>
+                </fieldset>
+                <!---Footer - Copyright--->
+                <footer>
+                    &#169; This Calculator belongs to NLotfi
+                </footer>
+        </div>
     </body>
 </html>

@@ -1,4 +1,47 @@
-body {background-color:tan;}
-h1{color:green;}
+/* Set background color, font and box color */ 
+body {
+    background-color:black; 
+    font-family: arial; 
+    color:white;
+}
 
+/* Set header color and font */ 
+h1 {
+    color:grey; 
+    font-family: verdana; 
+}
 
+/* Set main division background color, color, width, padding, border-radius, box-alignment */
+.maindiv {
+    background-color:white; 
+    color:black; 
+    width: 500px; 
+    padding: 20px;
+    border-radius: 25px;
+    box-align: center;
+}
+
+/* Set fieldset border and margin start*/
+fieldset {
+    border: none;
+    margin-inline-start: 70px;
+}
+
+/* Set label display, alignment, and content justification */
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+/* Set input display, width, and content justification */
+.input {
+    display: flex;
+    width: 285px;
+    justify-content: flex-start;
+}
+
+/* Highlighter for the result */
+.highlight {
+    background-color:yellow;
+}
